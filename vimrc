@@ -3,11 +3,21 @@ filetype off
 let g:airline_solarized_bg='dark'
 let g:airline_theme='solarized'
 set autoindent
+set number relativenumber
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 map <F2> :NERDTreeToggle<CR>
+nmap <Leader>f za
+
+
+noremap <silent><F4> :NodeInspectStart<cr>
+noremap <silent><F5> :NodeInspectRun<cr>
+noremap <silent><F7> :NodeInspectStepInto<cr>
+noremap <silent><F8> :NodeInspectStepOver<cr>
+noremap <silent><F9> :NodeInspectToggleBreakpoint<cr>
+noremap <silent><F10> :NodeInspectStop<cr>
 
 " set runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -21,6 +31,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'preservim/nerdtree'
+Plugin 'eliba2/vim-node-inspect'
 
 call vundle#end() 	  " required, all plugin statements must go 
 filetype plugin indent on " required
